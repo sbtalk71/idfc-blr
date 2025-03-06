@@ -1,0 +1,1 @@
+create table empolyee(empno int primary key, name varchar(30),address varchar(30), salary double);

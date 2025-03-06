@@ -1,0 +1,30 @@
+2025-03-05 16:24:39.554011+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values (101,'Aman','Kanpur',56000) [42102-232]
+2025-03-05 16:24:39.556006+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(102,'Jagan','Hyderabad',66000) [42102-232]
+2025-03-05 16:24:39.558006+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(112,'Raja','bangalore',58000) [42102-232]
+2025-03-05 16:24:39.560006+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(103,'James','Mumbai',76000) [42102-232]
+2025-03-05 16:24:39.562799+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(104,'Rupal','Noida',96000) [42102-232]
+2025-03-05 16:24:39.563814+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(105,'Karan','Mumbai',56000) [42102-232]
+2025-03-05 16:24:39.564812+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(106,'Narendra','Delhi',56000) [42102-232]
+2025-03-05 16:24:39.565811+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(107,'Amit','Delhi',56000) [42102-232]
+2025-03-05 16:24:39.567806+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(108,'Arun','Chennai',56000) [42102-232]
+2025-03-05 16:24:39.567806+05:30 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMP" not found; SQL statement:
+insert into emp(empno,name,address,salary) values(109,'Kishore','Kochi',56000) [42102-232]

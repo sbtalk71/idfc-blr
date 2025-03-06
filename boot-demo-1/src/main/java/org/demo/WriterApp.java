@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class WriterApp {
 
     @Autowired
-    @Qualifier("dtw")
+    @Qualifier("decoratedTextWriter")
     private Writer writer;
 
     public void printText(String message){

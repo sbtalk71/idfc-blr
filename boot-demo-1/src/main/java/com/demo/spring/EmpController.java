@@ -3,6 +3,7 @@ package com.demo.spring;
 import com.demo.spring.entities.Emp;
 import com.demo.spring.repo.EmpRepository;
 import com.demo.spring.service.EmpService;
+import com.demo.spring.util.EmpList;
 import com.demo.spring.util.ResponseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -25,12 +26,12 @@ private EmpService empService;
         return "Hello from Spring REST";
     }
 
-    @GetMapping(path="/", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Emp>> getAll(){
+    @GetMapping(path="/", produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
+    public ResponseEntity<EmpList> getAll(){
         return ResponseEntity.ok(empService.getAllEmps());
     }
 
-    @GetMapping(path="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path="/{id}", produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<Emp> findById(@PathVariable("id") Integer id){
         return ResponseEntity.ok(empService.findOneById(id));
     }

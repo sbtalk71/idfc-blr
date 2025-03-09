@@ -4,11 +4,13 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.Data;
 
 //@Data
 @Entity
 @Table(name="EMPOLYEE")
+@XmlRootElement
 public class Emp {
     @Id
     @Column(name="EMPNO")

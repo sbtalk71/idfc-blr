@@ -4,6 +4,7 @@ import com.demo.spring.entities.Emp;
 import com.demo.spring.exceptions.EmpExistsException;
 import com.demo.spring.exceptions.EmpNotFoundException;
 import com.demo.spring.repo.EmpRepository;
+import com.demo.spring.util.EmpList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,11 @@ public class EmpService {
         this.empRepository=empRepository;
     }
 
-    public List<Emp> getAllEmps(){
+    public EmpList getAllEmps(){
         logger.info("Fetchin all the employees from database");
-        return empRepository.findAll();
+        EmpList list= new EmpList();
+        list.setEmpList(empRepository.findAll());
+        return list;
     }
 
     public Emp findOneById(Integer id){
@@ -35,7 +38,7 @@ public class EmpService {
         }*/
 
         logger.info("Fetchin on employee with id "+id);
-        return empRepository.findById(id).orElseThrow(()->new RuntimeException("emp not found"));
+        return empRepository.findById(id).orElseThrow(()->new EmpNotFoundException("emp not found"));
     }
 
     public Emp save(Emp e) {

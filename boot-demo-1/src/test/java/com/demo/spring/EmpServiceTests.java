@@ -1,6 +1,7 @@
 package com.demo.spring;
 
 import com.demo.spring.entities.Emp;
+import com.demo.spring.exceptions.EmpNotFoundException;
 import com.demo.spring.repo.EmpRepository;
 import com.demo.spring.service.EmpService;
 import org.junit.jupiter.api.Assertions;
@@ -30,12 +31,22 @@ class EmpServiceTests {
     EmpRepository repository;
 
     @Test
-public void testEmpServiceFindOne(){
+public void shouldReturnNameAIfId100(){
 
 when(repository.findById(100)).thenReturn(Optional.of(new Emp(100,"A","B",30)));
 
-        Assertions.assertEquals(100,service.findOneById(100).getEmpId());
+        Assertions.assertEquals("A",service.findOneById(100).getName());
 }
+
+    @Test
+    public void shouldThrowEmpNotFoundExceptionIfIdNonExistent(){
+
+        when(repository.findById(1010)).thenThrow(new EmpNotFoundException());
+
+        Assertions.assertThrows(EmpNotFoundException.class,()->{
+            service.findOneById(1010);
+        });
+    }
 
 }
 

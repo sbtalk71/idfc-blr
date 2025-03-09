@@ -1,5 +1,8 @@
 package com.demo.spring.util;
 
+import jakarta.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class ResponseMessage {
     private String status;
 

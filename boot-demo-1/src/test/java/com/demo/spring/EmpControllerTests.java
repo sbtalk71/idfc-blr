@@ -27,7 +27,7 @@ public class EmpControllerTests {
     EmpService service;
 
     @Test
-    public void testFindOneEmp() throws Exception{
+    public void shoudGETwithId100ReturnNameA() throws Exception{
         when(service.findOneById(100)).thenReturn(new Emp(100,"A","B",200));
 
         mvc.perform(get("/emp/100"))
@@ -35,4 +35,6 @@ public class EmpControllerTests {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.name").value("A"));
     }
+
+
 }
